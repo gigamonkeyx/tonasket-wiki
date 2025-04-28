@@ -1,0 +1,8 @@
+This directory should contain the following image files:
+- bakery.jpg
+- farm-supply.jpg
+- wellness.jpg
+- auto-repair.jpg
+- winery.jpg
+
+In a real implementation, these would be actual JPG image files.

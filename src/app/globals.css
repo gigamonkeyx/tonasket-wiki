@@ -1,8 +1,30 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+  --card-background: #ffffff;
+  --card-foreground: #000000;
+  --primary: #1a56db;
+  --primary-foreground: #ffffff;
+  --muted: #f3f4f6;
+  --muted-foreground: #000000;
+  --border: #e5e7eb;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #ffffff;
+  --card-background: #1e1e1e;
+  --card-foreground: #ffffff;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --muted: #1f2937;
+  --muted-foreground: #e5e7eb;
+  --border: #374151;
 }
 
 @theme inline {
@@ -12,15 +34,50 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-card {
+  background-color: var(--card-background);
+}
+
+.text-card-foreground {
+  color: var(--card-foreground);
+}
+
+.text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+/* Higher contrast styles */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+p, span, div {
+  color: var(--foreground);
+}
+
+.bg-white {
+  background-color: var(--card-background);
+}
+
+.bg-gray-50 {
+  background-color: var(--background);
+}
+
+.bg-gray-100 {
+  background-color: var(--muted);
+}
+
+.text-black {
+  color: var(--foreground);
+}
+
+.border-gray-200, .border-gray-300 {
+  border-color: var(--border);
 }

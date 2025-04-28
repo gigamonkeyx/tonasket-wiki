@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tonasket Resource Wiki
+
+A comprehensive web platform that aggregates data from various sources to provide a one-stop resource for Tonasket and Okanogan County. The platform includes economic data, business information, trade impact analysis, news, and weather.
+
+## Features
+
+- **Economic Data**: Comprehensive economic statistics, employment data, and growth indicators
+- **Business Directory**: Local business listings with details and categories
+- **Trade Impact Analysis**: Analysis of trade policies and their impact on the local economy
+- **News Aggregator**: Latest news from local sources
+- **Weather Information**: Current conditions and forecast for the area
+- **Modern UI**: Responsive design that works on all devices
+
+## Technology Stack
+
+- **Frontend**: React with Next.js
+- **Backend**: Node.js with Express
+- **Database**: PostgreSQL with Prisma ORM
+- **Web Crawling**: Puppeteer/Cheerio for data extraction
+- **Data Visualization**: D3.js and Chart.js
+- **Containerization**: Docker for development and deployment
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v18 or higher)
+- Docker and Docker Compose
+- Git
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/tonasket-wiki.git
+   cd tonasket-wiki
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-## Learn More
+3. Set up Docker:
 
-To learn more about Next.js, take a look at the following resources:
+   See [DOCKER-SETUP.md](./DOCKER-SETUP.md) for detailed instructions on setting up Docker, including options for installing on the D: drive if you have limited space on your C: drive.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Start the development environment:
+   ```
+   # On Windows
+   .\scripts\start-dev.ps1
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   # On Linux/Mac
+   chmod +x ./scripts/start-dev.sh
+   ./scripts/start-dev.sh
+   ```
 
-## Deploy on Vercel
+5. Open your browser and navigate to `http://localhost:3000`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Development Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev`: Start the Next.js development server
+- `npm run docker:up`: Start Docker containers
+- `npm run docker:down`: Stop Docker containers
+- `npm run db:migrate`: Run Prisma migrations
+- `npm run db:seed`: Seed the database with initial data
+- `npm run crawl`: Run web crawlers to fetch data
+- `npm run test`: Run tests
+- `npm run build`: Build the application for production
+
+## Project Structure
+
+- `src/app/`: Next.js pages and API routes
+- `src/components/`: Reusable React components
+- `src/utils/`: Utility functions and web crawlers
+- `prisma/`: Database schema and migrations
+- `scripts/`: Development and deployment scripts
+- `docker-compose.yml`: Docker configuration
+
+## Data Sources
+
+- U.S. Census Bureau
+- Bureau of Labor Statistics
+- Okanogan County Economic Development Council
+- Washington State Department of Commerce
+- Local news outlets
+- National Weather Service
+- And more...
+
+## Deployment
+
+The project can be deployed to various hosting providers:
+
+1. **Local Deployment**: Use the provided scripts to deploy on a local server
+2. **Cloud Deployment**: Deploy to Vercel, Netlify, AWS, or other cloud providers
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Data USA for economic data
+- Weather.gov for weather data
+- Local news sources for news content
