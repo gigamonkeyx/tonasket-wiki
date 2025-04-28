@@ -5,26 +5,30 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #000000;
+  --foreground: #1a1a1a;
   --card-background: #ffffff;
-  --card-foreground: #000000;
-  --primary: #1a56db;
+  --card-foreground: #1a1a1a;
+  --primary: #6d28d9; /* Purple instead of blue */
   --primary-foreground: #ffffff;
-  --muted: #f3f4f6;
-  --muted-foreground: #000000;
+  --muted: #f5f5f5;
+  --muted-foreground: #525252;
   --border: #e5e7eb;
+  --accent: #10b981; /* Teal accent color */
+  --accent-foreground: #ffffff;
 }
 
 .dark {
   --background: #121212;
-  --foreground: #ffffff;
+  --foreground: #f5f5f5;
   --card-background: #1e1e1e;
-  --card-foreground: #ffffff;
-  --primary: #3b82f6;
+  --card-foreground: #f5f5f5;
+  --primary: #8b5cf6; /* Lighter purple for dark mode */
   --primary-foreground: #ffffff;
   --muted: #1f2937;
-  --muted-foreground: #e5e7eb;
+  --muted-foreground: #d4d4d4;
   --border: #374151;
+  --accent: #34d399; /* Lighter teal for dark mode */
+  --accent-foreground: #121212;
 }
 
 @theme inline {

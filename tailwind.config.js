@@ -16,6 +16,10 @@ module.exports = {
           DEFAULT: 'var(--primary)',
           foreground: 'var(--primary-foreground)',
         },
+        accent: {
+          DEFAULT: 'var(--accent)',
+          foreground: 'var(--accent-foreground)',
+        },
         card: {
           DEFAULT: 'var(--card-background)',
           foreground: 'var(--card-foreground)',
