@@ -9,7 +9,8 @@ A comprehensive web platform that aggregates data from various sources to provid
 - **Trade Impact Analysis**: Analysis of trade policies and their impact on the local economy
 - **News Aggregator**: Latest news from local sources
 - **Weather Information**: Current conditions and forecast for the area
-- **Modern UI**: Responsive design that works on all devices
+- **Modern UI**: Responsive design with a sleek purple and teal color scheme that works on all devices
+- **Dark/Light Mode**: Toggle between dark and light themes for comfortable viewing in any environment
 
 ## Technology Stack
 
@@ -32,7 +33,7 @@ A comprehensive web platform that aggregates data from various sources to provid
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/tonasket-wiki.git
+   git clone https://github.com/gigamonkeyx/tonasket-wiki.git
    cd tonasket-wiki
    ```
 
